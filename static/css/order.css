@@ -1,0 +1,48 @@
+body {
+    background-color: white;
+}
+
+header {
+    background-color: whitesmoke;
+}
+
+.login-signup {
+    border: 3px dashed pink;
+    display: flex;
+    flex-wrap: wrap ;
+}
+
+.order-list {
+    margin: 50px 0;
+}
+
+.order-list-item {
+    display: flex;
+    justify-content: space-around;
+}
+
+.order-list-item p {
+    margin-left: 50px;
+}
+
+.btn-delivered {
+    --bs-btn-color: #fff;
+  --bs-btn-bg: #45fd0d;
+  --bs-btn-border-color: #45fd0d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #45d70b;
+  --bs-btn-hover-border-color: #45d70b;
+  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #45d70b;
+  --bs-btn-active-border-color: #45fd0d;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #45fd0d;
+  --bs-btn-disabled-border-color: #45fd0d;
+}
+
+footer {
+    background-color: lightblue;
+    margin-bottom: 0px;
+}

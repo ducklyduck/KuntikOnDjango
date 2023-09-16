@@ -1,0 +1,18 @@
+body {
+    background-color: white;
+}
+
+header {
+    background-color: whitesmoke;
+}
+
+.login-signup {
+    border: 3px dashed pink;
+    display: flex;
+    flex-wrap: wrap ;
+}
+
+footer {
+    background-color: lightblue;
+    margin-bottom: 0px;
+}

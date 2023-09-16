@@ -1,0 +1,38 @@
+body {
+    background-color: white;
+}
+
+header {
+    background-color: whitesmoke;
+}
+
+.login-signup {
+    border: 3px dashed pink;
+    display: flex;
+    flex-wrap: wrap ;
+}
+
+.kuntic-custom{
+    background-color: rgb(157, 179, 199);
+}
+
+.kuntic-items {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.kuntic-items div {
+    min-width: 400px;
+    max-width: 600px;
+    height: 450px;
+}
+
+.lead-custom {
+    font-size: small;
+    font-weight: 300;
+}
+
+footer {
+    background-color: lightblue;
+    margin-bottom: 0px;
+}

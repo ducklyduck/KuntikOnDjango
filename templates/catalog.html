@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">``
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/catalog.css' %}">
+</head>
+<body>
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/catalog" class="nav-link active" aria-current="page">Каталог</a></li>
+        <li class="nav-item"><a href="/orders" class="nav-link">Заказы: 0</a></li>
+        <div class="login-signup">
+          <li class="nav-item"><a href="#" class="nav-link">Вход</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Регистрация</a></li>
+        </div>
+      </ul>
+    </header>
+
+    <div class="kuntic-custom p-5 mb-4 bg-body-tertiary rounded-3">
+      <h1 class="display-5 fw-bold">Кунтик на заказ</h1>
+      <p class="col-md-8 fs-4">Вам не подходят предложенные кунтики? Создайте свой в нашем редакторе кунтиков!</p>
+      <p class="col-md-8 fs-6">При желании, вы можете связаться с нашим специалистом для добавления дополнительных свойств.</p>
+      <a href="/create_kuntic"><button class="btn btn-primary btn-lg" type="button">Сделать кунтик на заказ</button></a>
+    </div>
+
+    <div class="kuntic-items flex-md-equal w-100">
+      {% for element in kuntics %}
+      <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+          <a href="/kuntic/{{element.id}}">
+            <h2 class="display-7">{{element.title}}</h2>
+          </a>
+          <p class="lead-custom">Ваш любимый кунтик в {{element.color}} цвете из {{element.material}} размера {{element.size}}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% comment %} <div class="kuntic-items flex-md-equal w-100 ps-md-3">
+        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div class="my-3 p-3">
+            <h2 class="display-7">Кунтик "Мантес"</h2>
+            <p class="lead-custom">Ваш любимый кунтик в розовом цвете из глины размера XL</p>
+          </div>
+        </div>
+        <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div class="my-3 py-3">
+            <h2 class="display-7">Кунтик "Калебо"</h2>
+            <p class="lead-custom">Ваш любимый кунтик в розовом цвете из глины размера XL</p>
+          </div>
+        </div>
+        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div class="my-3 p-3">
+            <h2 class="display-7">Кунтик "Крант</h2>
+            <p class="lead-custom">Ваш любимый кунтик в розовом цвете из глины размера XL</p>
+          </div>
+        </div>
+        <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div class="my-3 py-3">
+            <h2 class="display-7">Кунтик "Бартро"</h2>
+            <p class="lead-custom">Ваш любимый кунтик в розовом цвете из глины размера XL</p>
+          </div>
+        </div>
+        <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div class="my-3 p-3">
+            <h2 class="display-7">Кунтик "Шениль</h2>
+            <p class="lead-custom">Ваш любимый кунтик в розовом цвете из глины размера XL</p>
+          </div>
+        </div>
+        <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 py-3">
+                <h2 class="display-7">Кунтик "Дроко"</h2>
+                <p class="lead-custom">Ваш любимый кунтик в розовом цвете из глины размера XL</p>
+            </div>
+        </div>
+    </div> {% endcomment %}
+
+    <footer class="py-3">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Каталог</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Корзина</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2023 Kuntics Custom Shop</p>
+    </footer>
+</body>
+</html>
